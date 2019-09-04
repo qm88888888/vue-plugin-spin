@@ -1,11 +1,15 @@
 {
   "name": "vue-plugin-spin",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.3",
+  "private": false,
+  "description": "基于 vue-cli3 的 Spin 组件",
+  "main": "lib/spin.umd.min.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name spin --dest lib packages/index.ts"
   },
   "dependencies": {
     "core-js": "^2.6.5",

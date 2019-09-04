@@ -1,0 +1,59 @@
+$primary-color: rgb(80, 200, 240);
+$alter-color: rgb(115, 237, 226);
+
+.t-load-wrapper {
+  position: relative;
+  overflow: hidden !important;
+}
+
+.tloading-fade-enter-active {
+  animation: tloading-fade-in 0.3s;
+}
+
+.tloading-fade-leave-active {
+  animation: tloading-fade-out 0.3s;
+}
+
+@keyframes tloading-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tloading-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loading-mask-wrapper {
+  &-fixed {
+    position: fixed;
+  }
+  &-absolute {
+    position: absolute;
+  }
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 9999;
+  .loading-wrapper {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    &-title {
+      text-align: center;
+      font-size: 12px;
+      color: rgb(80, 200, 240)
+    }
+  }
+}
