@@ -22,8 +22,8 @@ import tDefault from './default.vue';
 @Component({
   name: 'tLoading',
   components: {
-    'stretch': tStretch,
-    'default': tDefault,
+    stretch: tStretch,
+    default: tDefault,
   },
 })
 export default class TLoading extends Vue implements ILoadFuns {

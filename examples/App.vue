@@ -13,12 +13,12 @@ import { LoadType } from '../types/index.d';
 })
 export default class App extends Vue {
   private loading: boolean = true;
-  mounted() {
-    // this.$loading({
-    //   fullscreen: true,
-    //   type: 'default',
-    // });
-  }
+  // mounted() {
+  //   this.$loading({
+  //     fullscreen: true,
+  //     type: 'default',
+  //   });
+  // }
 }
 </script>
 
