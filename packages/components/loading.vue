@@ -6,7 +6,7 @@
       :style="{ backgroundColor: `rgba(255, 255, 255, ${opacity / 10})` }"
     >
       <div class="loading-wrapper">
-        <component :is="current"></component>
+        <component :is="type"></component>
         <div v-if="titleShow" class="loading-wrapper-title">{{ title }}</div>
       </div>
     </div>
@@ -17,11 +17,13 @@
 import { Vue, Component } from 'vue-property-decorator';
 import { ILoadFuns } from '../../types/index.d';
 import tStretch from './stretch.vue';
+import tDefault from './default.vue';
 
 @Component({
   name: 'tLoading',
   components: {
-    tStretch,
+    'stretch': tStretch,
+    'default': tDefault,
   },
 })
 export default class TLoading extends Vue implements ILoadFuns {
@@ -29,7 +31,7 @@ export default class TLoading extends Vue implements ILoadFuns {
 
   private fullscreen: boolean = true;
 
-  private current: string = 'tStretch';
+  private type: string = 'stretch';
 
   private title: string = 'Loading';
 

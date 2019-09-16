@@ -5,6 +5,7 @@ export interface ILoadOpts {
   loading?: Boolean,
   opacity?: number,
   target?: Element | string | null,
+  type?: LoadType,
 }
 
 export interface ILoadFuns {
