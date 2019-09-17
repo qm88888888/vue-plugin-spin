@@ -6,7 +6,7 @@ module.exports = {
       entry: 'examples/main.ts',
       template: 'public/index.html',
       filename: 'index.html'
-    }
+    },
   },
   css: {
     extract: false,
@@ -21,14 +21,14 @@ module.exports = {
     config.resolve.alias
       .set('~', path.resolve('packages'))
     config.module
-    .rule('js')
-    .include.add('/packages')
-    .end()
-    .use('bable')
-    .loader('bable-loader')
-    .tap(options => {
-      // 修改它的选项...
-      return options
-    })
-  }
+      .rule('ts')
+      .include.add('/packages')
+      .end()
+      .use('bable')
+      .loader('bable-loader')
+      .tap(options => {
+        // 修改它的选项...
+        return options
+      });
+  },
 }

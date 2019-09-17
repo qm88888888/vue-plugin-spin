@@ -1,8 +1,14 @@
 {
   "name": "vue-plugin-spin",
-  "version": "0.1.6",
-  "private": false,
   "description": "基于 vue-cli3 的 Spin 组件",
+  "version": "0.1.6",
+  "license": "MIT",
+  "author": {
+    "name": "Terry",
+    "email": "qm88888888@yeah.net",
+    "url": "https://qmweb.cc"
+  },
+  "private": false,
   "main": "lib/spin.umd.min.js",
   "types": "types/index.d.ts",
   "scripts": {
@@ -11,8 +17,6 @@
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib --name spin --dest lib packages/index.ts"
   },
-  "author": "Terry",
-  "license": "MIT",
   "keywords": [
     "vue-load",
     "vue-loading",
