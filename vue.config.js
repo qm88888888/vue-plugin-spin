@@ -20,15 +20,5 @@ module.exports = {
   chainWebpack: config=> {
     config.resolve.alias
       .set('~', path.resolve('packages'))
-    config.module
-      .rule('ts')
-      .include.add('/packages')
-      .end()
-      .use('bable')
-      .loader('bable-loader')
-      .tap(options => {
-        // 修改它的选项...
-        return options
-      });
   },
 }
