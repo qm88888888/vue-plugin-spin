@@ -1,5 +1,5 @@
 <template>
-  <div id="app" v-spin.fullscreen.default="loading">
+  <div id="app" v-spin.default="loading">
   </div>
 </template>
 
@@ -23,4 +23,8 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
+#app{
+  width: 200px;
+  height: 200px;
+}
 </style>

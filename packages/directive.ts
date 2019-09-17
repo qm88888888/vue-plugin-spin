@@ -18,12 +18,10 @@ export default class Directive {
 
   bind(el: any, bind: DirectiveBinding) {
     const opts: ILoadOpts = Object.assign({}, Directive.options);
+    opts.target = el;
+    opts.fullscreen = false;
     if (Object.prototype.hasOwnProperty.call(bind.modifiers, 'fullscreen')) opts.fullscreen = true;
     if (Object.prototype.hasOwnProperty.call(bind.modifiers, 'default')) opts.type = 'default';
-    else {
-      opts.target = el;
-      opts.fullscreen = false;
-    }
     /* eslint-disable no-param-reassign */
     el.instance = new Plugin().install(opts, bind.value) as IDirective;
   }
