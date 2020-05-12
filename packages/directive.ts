@@ -18,6 +18,7 @@ export default class Directive {
 
   bind(el: any, bind: DirectiveBinding) {
     const opts: ILoadOpts = Object.assign({}, Directive.options);
+    opts.opacity = el.getAttribute('spin-opacity') || 10;
     opts.target = el;
     opts.fullscreen = false;
     if (Object.prototype.hasOwnProperty.call(bind.modifiers, 'fullscreen')) opts.fullscreen = true;

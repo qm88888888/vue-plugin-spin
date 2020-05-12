@@ -1,7 +1,7 @@
 {
   "name": "vue-plugin-spin",
   "description": "基于 vue-cli3 的 Spin 组件",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "license": "MIT",
   "author": {
     "name": "Terry",
